@@ -1,18 +1,23 @@
-// Konfigurasi koneksi Firebase (Dapatkan dari Firebase Console Anda)
+// js/firebase-config.js
+
+/**
+ * @fileoverview Modul ini berisi konfigurasi inisialisasi Firebase menggunakan gaya Compat (v8).
+ * Catatan: Variabel 'db' harus dideklarasikan dengan 'var' atau diakses secara global agar terlihat di modul lain.
+ */
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCB3g-ElhXU1VR7ZyvrMnSEmWYochP2w1w",
-    authDomain: "aplikasiinputnilaimahasiswa.firebaseapp.com",
-    projectId: "aplikasiinputnilaimahasiswa",
-    storageBucket: "aplikasiinputnilaimahasiswa.firebasestorage.app",
-    messagingSenderId: "1068340165425",
-    appId: "1:1068340165425:web:d2856e3337550e07d58e10",
-    measurementId: "G-3B96ZB3W6V"
+  apiKey: "AIzaSyCD0YIa97QYHx66QtxRgjJ5FE5E2Mi6N3E",
+  authDomain: "inputnilaimahasiswa-c7634.firebaseapp.com",
+  projectId: "inputnilaimahasiswa-c7634",
+  storageBucket: "inputnilaimahasiswa-c7634.firebasestorage.app",
+  messagingSenderId: "218015118409",
+  appId: "1:218015118409:web:f87d6d27240e94413ffb98",
+  measurementId: "G-ZFH883MW36"
 };
 
-// Inisialisasi Firebase
-// Inisialisasi harus dilakukan sekali
-const app = firebase.initializeApp(firebaseConfig);
 
-// Ambil referensi ke Cloud Firestore
-// Variabel db ini akan digunakan di logic.js
-const db = firebase.firestore();
+// Inisialisasi Firebase (Gaya Compat)
+firebase.initializeApp(firebaseConfig);
+
+// Inisialisasi Cloud Firestore dan menjadikannya variabel global
+var db = firebase.firestore();
